@@ -1,0 +1,77 @@
+name: Build Debian Package
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+
+jobs:
+
+  build:
+
+    name: Build .deb Package
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+
+      - name: Install Build Dependencies
+        run: |
+          sudo apt update
+
+          sudo apt install -y \
+            dpkg-dev \
+            lintian \
+            desktop-file-utils \
+            appstream \
+            shared-mime-info \
+            ca-certificates
+
+
+      - name: Make Build Script Executable
+        run: |
+          chmod +x Build.sh
+
+
+      - name: Validate Desktop File
+        run: |
+          desktop-file-validate \
+            usr/share/applications/debian-package-template.desktop
+
+
+      - name: Validate AppStream Metadata
+        run: |
+          appstreamcli validate \
+            usr/share/metainfo/io.github.johnlogostini.Debian_Package_Template.metainfo.xml
+
+
+      - name: Build Debian Package
+        run: |
+          ./Build.sh
+
+
+      - name: Validate Debian Package
+        run: |
+          lintian \
+            Build/*.deb
+
+
+      - name: Upload Debian Package
+        uses: actions/upload-artifact@v4
+
+        with:
+          name: debian-package-template-package
+
+          path: Build/*.deb
