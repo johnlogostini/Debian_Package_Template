@@ -1,0 +1,25 @@
+Package: debian-package-template
+Version: 1.0.0
+Section: devel
+Priority: optional
+Architecture: amd64
+Maintainer: JohnLogostini <johnlogostini16485@gmail.com>
+Installed-Size: 164
+Depends: libc6
+Recommends:
+Suggests:
+Homepage: https://github.com/johnlogostini/Debian_Package_Template
+Description: Create professional Debian packages
+ Debian Package Template is a reusable foundation for creating
+ professional Debian packages.
+ .
+ It provides a structured environment for building Debian packages with:
+  * Desktop launcher integration
+  * AppStream metadata for GNOME Software
+  * MIME type registration
+  * SVG application and file icons
+  * Localization support
+  * Installed application data in /usr/lib
+  * Wrapper launcher in /usr/bin
+  * Manual pages and package documentation
+  * Example project files
