@@ -1,0 +1,83 @@
+.TH DEBIAN-PACKAGE-TEMPLATE 1 "July 2026" "1.0.0" "User Commands"
+
+.SH NAME
+debian-package-template \- Debian Package Template demonstration application
+
+.SH SYNOPSIS
+.B debian-package-template
+.RI [ ARGUMENT ... ] " [FILE ...]"
+
+.SH DESCRIPTION
+Debian Package Template is a minimal demonstration application for learning
+how Debian packages are structured and installed.
+
+The application displays runtime information, including:
+
+.IP \(bu 4
+The executable name
+
+.IP \(bu 4
+The current working directory
+
+.IP \(bu 4
+The command-line arguments used to launch the application
+
+.IP \(bu 4
+Any files passed to the application
+
+.PP
+The application uses external localization files stored alongside the
+executable to demonstrate language support without recompiling the
+application.
+
+.SH FILES
+.TP
+.I /usr/bin/debian-package-template
+Launcher script.
+
+.TP
+.I /opt/debian-package-template/dpt
+Application executable.
+
+.TP
+.I /opt/debian-package-template/Localization/
+Localization files used by the application.
+
+.TP
+.I /usr/share/applications/debian-package-template.desktop
+Desktop launcher.
+
+.TP
+.I /usr/share/icons/hicolor/
+Application icons.
+
+.TP
+.I /usr/share/metainfo/debian-package-template.metainfo.xml
+AppStream metadata.
+
+.SH EXAMPLES
+Run normally:
+
+.B debian-package-template
+
+.PP
+Launch with arguments:
+
+.B debian-package-template --example test
+
+.PP
+Open one or more files:
+
+.B debian-package-template file1.txt image.png
+
+.SH AUTHOR
+John Logostini
+
+.SH LICENSE
+MIT License.
+
+.SH SEE ALSO
+.BR dpkg (1),
+.BR dpkg-deb (1),
+.BR apt (8),
+.BR desktop-file-install (1)
