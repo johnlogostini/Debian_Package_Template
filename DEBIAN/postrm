@@ -1,0 +1,48 @@
+#!/bin/sh
+
+set -e
+
+###############################################################################
+# Debian Package Template
+# Post-Removal Script
+###############################################################################
+
+case "$1" in
+    remove|purge)
+
+        ###############################################################################
+        # Update MIME Database
+        ###############################################################################
+
+        if command -v update-mime-database >/dev/null 2>&1; then
+            update-mime-database /usr/share/mime
+        fi
+
+        ###############################################################################
+        # Update Desktop Database
+        ###############################################################################
+
+        if command -v update-desktop-database >/dev/null 2>&1; then
+            update-desktop-database /usr/share/applications
+        fi
+
+        ###############################################################################
+        # Update Icon Cache
+        ###############################################################################
+
+        if command -v gtk-update-icon-cache >/dev/null 2>&1; then
+            gtk-update-icon-cache -f -t /usr/share/icons/hicolor
+        fi
+
+        ###############################################################################
+        # Refresh AppStream Cache
+        ###############################################################################
+
+        if command -v appstreamcli >/dev/null 2>&1; then
+            appstreamcli refresh-cache >/dev/null 2>&1 || true
+        fi
+
+        ;;
+esac
+
+exit 0

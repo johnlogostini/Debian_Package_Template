@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+###############################################################################
+# Debian Package Template
+# Pre-Removal Script
+###############################################################################
+
+case "$1" in
+    remove)
+
+        # Remove application runtime cache if it exists
+        if [ -d "/var/cache/debian-package-template" ]; then
+            rm -rf /var/cache/debian-package-template
+        fi
+
+        ;;
+
+    upgrade|deconfigure)
+        ;;
+
+esac
+
+exit 0
