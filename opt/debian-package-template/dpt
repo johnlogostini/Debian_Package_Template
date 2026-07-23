@@ -1,0 +1,139 @@
+#!/bin/sh
+
+###############################################################################
+# Debian Package Template
+# Test Application
+###############################################################################
+
+TITLE_DEFAULT="Debian Package Template"
+
+APP_DIR="$(dirname "$0")"
+
+###############################################################################
+# Load Localization
+###############################################################################
+
+APP_DIR="$(dirname "$0")"
+
+if [ -n "$LANGUAGE" ]; then
+    LANGUAGE_LIST="$LANGUAGE"
+else
+    LANGUAGE_LIST="${LC_ALL:-${LC_MESSAGES:-${LANG}}}"
+fi
+
+LOCALIZATION=""
+
+for LANGUAGE_CODE in $(echo "$LANGUAGE_LIST" | tr ':' ' ')
+do
+    LANGUAGE_CODE="${LANGUAGE_CODE%%.*}"
+    LANGUAGE_CODE="${LANGUAGE_CODE%%@*}"
+
+    if [ -f "$APP_DIR/Localization/$LANGUAGE_CODE.local" ]; then
+        LOCALIZATION="$APP_DIR/Localization/$LANGUAGE_CODE.local"
+        break
+    fi
+
+    SHORT_LANGUAGE="${LANGUAGE_CODE%%_*}"
+
+    if [ -f "$APP_DIR/Localization/$SHORT_LANGUAGE.local" ]; then
+        LOCALIZATION="$APP_DIR/Localization/$SHORT_LANGUAGE.local"
+        break
+    fi
+done
+
+if [ -z "$LOCALIZATION" ]; then
+    LOCALIZATION="$APP_DIR/Localization/en_US.local"
+fi
+
+. "$LOCALIZATION"
+
+###############################################################################
+# Build Output
+###############################################################################
+
+MESSAGE="$EXECUTABLE
+  $(basename "$0")
+
+$WORKING_DIRECTORY
+  $(pwd)
+
+$ARGUMENTS"
+
+###############################################################################
+# Arguments
+###############################################################################
+
+if [ "$#" -eq 0 ]; then
+
+    MESSAGE="$MESSAGE
+  $NONE"
+
+else
+
+    for ARG in "$@"
+    do
+        MESSAGE="$MESSAGE
+  $ARG"
+    done
+
+fi
+
+###############################################################################
+# Files
+###############################################################################
+
+MESSAGE="$MESSAGE
+
+$FILES"
+
+FOUND_FILE=0
+
+for ARG in "$@"
+do
+
+    if [ -f "$ARG" ]; then
+
+        MESSAGE="$MESSAGE
+  $(basename "$ARG")"
+
+        FOUND_FILE=1
+
+    fi
+
+done
+
+if [ "$FOUND_FILE" -eq 0 ]; then
+
+    MESSAGE="$MESSAGE
+  $NONE"
+
+fi
+
+###############################################################################
+# Terminal Output
+###############################################################################
+
+echo "=================================================="
+echo "$TITLE"
+echo "=================================================="
+echo
+
+printf "%s\n" "$MESSAGE"
+
+echo
+
+###############################################################################
+# Zenity Output
+###############################################################################
+
+if command -v zenity >/dev/null 2>&1; then
+
+    zenity \
+        --info \
+        --title="$TITLE" \
+        --width=550 \
+        --text="$MESSAGE"
+
+fi
+
+exit 0
