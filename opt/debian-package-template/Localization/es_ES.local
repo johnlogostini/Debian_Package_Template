@@ -1,0 +1,6 @@
+TITLE="Plantilla de paquete Debian"
+EXECUTABLE="Ejecutable:"
+WORKING_DIRECTORY="Directorio de trabajo:"
+ARGUMENTS="Argumentos:"
+FILES="Archivos:"
+NONE="Ninguno"

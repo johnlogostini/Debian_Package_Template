@@ -1,0 +1,6 @@
+TITLE="Debian 软件包模板"
+EXECUTABLE="可执行文件:"
+WORKING_DIRECTORY="工作目录:"
+ARGUMENTS="参数:"
+FILES="文件:"
+NONE="无"

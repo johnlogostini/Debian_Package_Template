@@ -1,0 +1,6 @@
+TITLE="Modello Pacchetto Debian"
+EXECUTABLE="Eseguibile:"
+WORKING_DIRECTORY="Cartella di lavoro:"
+ARGUMENTS="Argomenti:"
+FILES="File:"
+NONE="Nessuno"

@@ -1,0 +1,6 @@
+TITLE="Modèle de paquet Debian"
+EXECUTABLE="Exécutable:"
+WORKING_DIRECTORY="Répertoire de travail:"
+ARGUMENTS="Arguments:"
+FILES="Fichiers:"
+NONE="Aucun"

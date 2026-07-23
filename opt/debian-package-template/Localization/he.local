@@ -1,0 +1,6 @@
+TITLE="תבנית חבילת Debian"
+EXECUTABLE="קובץ הפעלה:"
+WORKING_DIRECTORY="תיקיית עבודה:"
+ARGUMENTS="ארגומנטים:"
+FILES="קבצים:"
+NONE="אין"

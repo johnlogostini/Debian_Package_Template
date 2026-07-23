@@ -1,0 +1,6 @@
+TITLE="Debian-Paketvorlage"
+EXECUTABLE="Ausführbare Datei:"
+WORKING_DIRECTORY="Arbeitsverzeichnis:"
+ARGUMENTS="Argumente:"
+FILES="Dateien:"
+NONE="Keine"

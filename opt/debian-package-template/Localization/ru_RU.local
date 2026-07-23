@@ -1,0 +1,6 @@
+TITLE="Шаблон пакета Debian"
+EXECUTABLE="Исполняемый файл:"
+WORKING_DIRECTORY="Рабочий каталог:"
+ARGUMENTS="Аргументы:"
+FILES="Файлы:"
+NONE="Нет"

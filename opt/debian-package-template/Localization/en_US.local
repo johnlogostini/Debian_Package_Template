@@ -1,0 +1,6 @@
+TITLE="Debian Package Template"
+EXECUTABLE="Executable:"
+WORKING_DIRECTORY="Working Directory:"
+ARGUMENTS="Arguments:"
+FILES="Files:"
+NONE="None"

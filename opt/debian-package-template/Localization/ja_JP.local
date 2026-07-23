@@ -1,0 +1,6 @@
+TITLE="Debian パッケージテンプレート"
+EXECUTABLE="実行ファイル:"
+WORKING_DIRECTORY="作業ディレクトリ:"
+ARGUMENTS="引数:"
+FILES="ファイル:"
+NONE="なし"

@@ -1,0 +1,6 @@
+TITLE="Debian 套件範本"
+EXECUTABLE="執行檔:"
+WORKING_DIRECTORY="工作目錄:"
+ARGUMENTS="參數:"
+FILES="檔案:"
+NONE="無"

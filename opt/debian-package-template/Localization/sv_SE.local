@@ -1,0 +1,6 @@
+TITLE="Debian-paketmall"
+EXECUTABLE="Körbar fil:"
+WORKING_DIRECTORY="Arbetskatalog:"
+ARGUMENTS="Argument:"
+FILES="Filer:"
+NONE="Ingen"
