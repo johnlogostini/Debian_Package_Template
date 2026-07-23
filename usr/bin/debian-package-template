@@ -5,7 +5,7 @@
 # Application Launcher
 ###############################################################################
 
-APP_DIR="/opt/debian-package-template"
+APP_DIR="/usr/lib/debian-package-template"
 APP_BIN="${APP_DIR}/dpt"
 
 if [ ! -x "$APP_BIN" ]; then
