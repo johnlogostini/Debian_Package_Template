@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+
+    <mime-type type="application/x-debian-package-template-file">
+
+        <comment>Debian Package Template File</comment>
+
+        <glob pattern="*.dptf"/>
+
+        <icon name="debian-package-template-file"/>
+
+    </mime-type>
+
+</mime-info>
