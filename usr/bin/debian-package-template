@@ -1,0 +1,19 @@
+#!/bin/sh
+
+###############################################################################
+# Debian Package Template
+# Application Launcher
+###############################################################################
+
+APP_DIR="/opt/debian-package-template"
+APP_BIN="${APP_DIR}/dpt"
+
+if [ ! -x "$APP_BIN" ]; then
+    echo "Error: Debian Package Template is not installed correctly."
+    echo
+    echo "Missing executable:"
+    echo "  $APP_BIN"
+    exit 1
+fi
+
+exec "$APP_BIN" "$@"
