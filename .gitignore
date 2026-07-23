@@ -1,0 +1,31 @@
+# Builds
+/Build/*
+!/Build/.gitkeep
+
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+# Mono
+.mono/
+data_*/
+mono_crash.*.json
+
+# Linux
+*~
+.directory
+*.kate-swp
+
+# Windows 
+ehthumbs.db
+Thumbs.db
+
+# Mac 
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
