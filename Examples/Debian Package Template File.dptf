@@ -1,0 +1,18 @@
+###############################################################################
+# Debian Package Template File
+# Format Version 1.0.0
+###############################################################################
+
+[Package]
+Name=debian-package-template
+DisplayName=Debian Package Template
+Version=1.0.0
+Architecture=amd64
+
+[Description]
+Summary=Create professional Debian packages.
+Description=Debian Package Template provides a foundation for building Debian packages with desktop integration, AppStream metadata, MIME support, and bundled applications.
+
+[Metadata]
+License=MIT
+Language=en
