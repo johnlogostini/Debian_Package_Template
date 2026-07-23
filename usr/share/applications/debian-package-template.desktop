@@ -1,0 +1,65 @@
+[Desktop Entry]
+Type=Application
+Exec=debian-package-template %f
+Icon=debian-package-template
+Terminal=false
+StartupNotify=true
+StartupWMClass=zenity
+#StartupWMClass=debian-package-template
+Categories=Development;Utility;
+MimeType=application/x-debian-package-template-file;
+
+Name=Debian Package Template
+Name[de]=Debian-Paketvorlage
+Name[en_US]=Debian Package Template
+Name[es]=Plantilla de Paquetes Debian
+Name[fr]=Modèle de paquet Debian
+Name[gd]=Teamplaid Pacaid Debian
+Name[he]=תבנית חבילת דביאן
+Name[it]=Modello pacchetto Debian
+Name[ja]=Debian パッケージテンプレート
+Name[ru]=Шаблон пакета Debian
+Name[sv]=Debian-paketmall
+Name[zh_CN]=Debian 软件包模板
+Name[zh_TW]=Debian 套件範本
+
+GenericName=Debian Package Builder
+GenericName[de]=Debian-Paketersteller
+GenericName[en_US]=Debian Package Builder
+GenericName[es]=Creador de paquetes Debian
+GenericName[fr]=Créateur de paquets Debian
+GenericName[gd]=Neach-togail phasganan Debian
+GenericName[he]=יוצר חבילות Debian
+GenericName[it]=Creatore di pacchetti Debian
+GenericName[ja]=Debian パッケージ作成ツール
+GenericName[ru]=Создатель пакетов Debian
+GenericName[sv]=Debian-paketbyggare
+GenericName[zh_CN]=Debian 软件包构建器
+GenericName[zh_TW]=Debian 套件建構工具
+
+Comment=Create professional Debian packages
+Comment[de]=Professionelle Debian-Pakete erstellen
+Comment[en_US]=Create professional Debian packages
+Comment[es]=Cree paquetes Debian profesionales
+Comment[fr]=Créer des paquets Debian professionnels
+Comment[gd]=Cruthaich pacaidean Debian proifeiseanta
+Comment[he]=צור חבילות Debian מקצועיות
+Comment[it]=Crea pacchetti Debian professionali
+Comment[ja]=プロフェッショナルな Debian パッケージを作成
+Comment[ru]=Создавайте профессиональные пакеты Debian
+Comment[sv]=Skapa professionella Debian-paket
+Comment[zh_CN]=创建专业的 Debian 软件包
+Comment[zh_TW]=建立專業的 Debian 套件
+
+Keywords=Debian;Package;Builder;Development;
+Keywords[de]=Debian;Paket;Builder;Entwicklung;
+Keywords[es]=Debian;Paquete;Constructor;Desarrollo;
+Keywords[fr]=Debian;Paquet;Créateur;Développement;
+Keywords[gd]=Debian;Pasgan;Togail;Leasachadh;
+Keywords[he]=Debian;חבילה;בונה;פיתוח;
+Keywords[it]=Debian;Pacchetto;Builder;Sviluppo;
+Keywords[ja]=Debian;パッケージ;ビルダー;開発;
+Keywords[ru]=Debian;Пакет;Сборщик;Разработка;
+Keywords[sv]=Debian;Paket;Byggare;Utveckling;
+Keywords[zh_CN]=Debian;软件包;构建;开发;
+Keywords[zh_TW]=Debian;套件;建構;開發;
