@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component type="desktop-application">
+
+    <!--
+        For projects created from this template, replace this with
+        a reverse-domain application ID.
+
+        Examples:
+            io.github.username.application
+            com.example.application
+    -->
+    <id>io.github.johnlogostini.Debian_Package_Template</id>
+
+    <name>Debian Package Template</name>
+
+    <summary>Create professional Debian packages</summary>
+
+    <metadata_license>CC0-1.0</metadata_license>
+
+    <project_license>MIT</project_license>
+
+    <description>
+        <p>
+            Debian Package Template is a reusable foundation for creating
+            professional Debian packages.
+        </p>
+
+        <p>
+            It provides a structured way to package applications with:
+        </p>
+
+        <ul>
+            <li>Desktop integration</li>
+            <li>AppStream metadata</li>
+            <li>MIME file associations</li>
+            <li>SVG application icons</li>
+            <li>Bundled applications installed in /opt</li>
+            <li>Example project files</li>
+        </ul>
+    </description>
+
+    <launchable type="desktop-id">
+        debian-package-template.desktop
+    </launchable>
+
+    <provides>
+        <binary>debian-package-template</binary>
+    </provides>
+
+    <categories>
+        <category>Development</category>
+        <category>Utility</category>
+    </categories>
+
+    <keywords>
+        <keyword>Debian</keyword>
+        <keyword>Package</keyword>
+        <keyword>Builder</keyword>
+        <keyword>Development</keyword>
+    </keywords>
+
+    <url type="homepage">
+        https://github.com/johnlogostini/Debian_Package_Template
+    </url>
+
+    <url type="bugtracker">
+        https://github.com/johnlogostini/Debian_Package_Template/issues
+    </url>
+
+    <url type="vcs-browser">
+        https://github.com/johnlogostini/Debian_Package_Template
+    </url>
+
+    <developer id="io.github.johnlogostini">
+        <name>JohnLogostini</name>
+    </developer>
+
+    <content_rating type="oars-1.1"/>
+
+    <releases>
+        <release version="1.0.0" date="2026-07-22">
+            <description>
+                <p>
+                    Initial release of Debian Package Template.
+                </p>
+            </description>
+        </release>
+    </releases>
+
+    <screenshots>
+
+        <screenshot type="default">
+            <image>
+                https://raw.githubusercontent.com/johnlogostini/Debian_Package_Template/refs/heads/main/Screenshots/Screenshot_01.png
+            </image>
+            <caption>
+                Debian Package Template main interface
+            </caption>
+        </screenshot>
+
+        <screenshot>
+            <image>
+                https://raw.githubusercontent.com/johnlogostini/Debian_Package_Template/refs/heads/main/Screenshots/Screenshot_02.png
+            </image>
+            <caption>
+                Package creation workflow
+            </caption>
+        </screenshot>
+
+        <screenshot>
+            <image>
+                https://raw.githubusercontent.com/johnlogostini/Debian_Package_Template/refs/heads/main/Screenshots/Screenshot_03.png
+            </image>
+            <caption>
+                Debian package configuration
+            </caption>
+        </screenshot>
+
+    </screenshots>
+
+</component>
